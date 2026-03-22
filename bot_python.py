@@ -1,10 +1,6 @@
 import random 
 import discord
 import asyncio
-from discord.ext import commands
-intents = discord.Intents.default()
-intents.message_content = True
-bot = commands.Bot(command_prefix = "?",intents = intents)
 from flask import Flask
 import threading
 
@@ -19,6 +15,10 @@ def run_web():
 
 #Chạy Flask song song
 threading.Thread(target=run_web).start()
+from discord.ext import commands
+intents = discord.Intents.default()
+intents.message_content = True
+bot = commands.Bot(command_prefix = "?",intents = intents)
 
 token = 'MTQ3OTA3ODExNTY1NjQ2NjUxNQ.GaGKdz.nSTQsZMu69VSdTlGF3b6jaW1NfXjWZaonY_3Dk'
 @bot.event
