@@ -20,7 +20,7 @@ intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix = "?",intents = intents)
 
-token = 'MTQ3OTA3ODExNTY1NjQ2NjUxNQ.GaGKdz.nSTQsZMu69VSdTlGF3b6jaW1NfXjWZaonY_3Dk'
+token = os.getenv("DISCORD_BOT_TOKEN")
 @bot.event
 async def on_ready():
     print("The bot is ready!")
