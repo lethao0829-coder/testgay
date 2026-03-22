@@ -4,7 +4,7 @@ import asyncio
 from flask import Flask
 import threading
 
-app = FlasK(_name_)
+app = Flask(_name_)
 
 @app.route("/")
 def home():
