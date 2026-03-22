@@ -20,7 +20,7 @@ def run_web():
 #Chạy Flask song song
 threading.Thread(target=run_web).start()
 
-token = 'MTQ3OTA3ODExNTY1NjQ2NjUxNQ.GaGKdz.nSTQsZMu69VSdTlGF3b6jaW1NfXjWZaonY_3Dk'
+token = os.getenv("DISCORD_BOT_TOKEN")
 @bot.event
 async def on_ready():
     print("The bot is ready!")
