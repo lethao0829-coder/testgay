@@ -4,7 +4,7 @@ import asyncio
 from flask import Flask
 import threading
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route("/")
 def home():
@@ -13,7 +13,7 @@ def home():
 def run_web():
   app.run(host="0.0.0.0",port=8080)
 
-#Chạy Flask song song
+# Chạy Flask song song
 threading.Thread(target=run_web).start()
 from discord.ext import commands
 intents = discord.Intents.default()
